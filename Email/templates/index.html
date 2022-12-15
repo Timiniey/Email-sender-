@@ -1,0 +1,62 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email sender</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    </head>
+<style>
+    
+input[type=text], input[type=password] {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  height: 50px;
+}
+.field{
+    width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  height: 200px;
+}
+.btn {
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+  height: 50px;
+}
+h2{
+    text-align:center;
+    margin: auto;
+}
+.contain{
+    text-align: center;
+}
+</style>
+<body>
+    <form action="portfolio" name="contactForm" method="POST">
+        {% csrf_token %}
+            <div class="contain">
+                <h2>Email sender</h2>
+                <input type="text"  placeholder="Your Name" name="name">
+                <br>
+                <input type="text" placeholder="Your Email" name="email">
+                <br>
+                <input type="text" placeholder="Phone" name="phone">
+                <br>
+                <textarea placeholder="Message"  name="message" class="field"></textarea>
+                <br>
+                <button class="btn">Send</button>
+            </div>
+    </form>
+</body>
+</HTML>
